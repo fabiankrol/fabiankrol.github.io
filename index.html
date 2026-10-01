@@ -1,7 +1,81 @@
----
-layout: basic
-title: Fabian Król
----
-{% for post in site.posts %}
-    {{ post.date | date_to_string }} &raquo; <a href="{{ post.url }}">{{ post.title }}</a><br />
-{% endfor %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fabian Król</title>
+  <meta name="description" content="Fabian Król — Team Lead at Fresha.">
+  <meta property="og:title" content="Fabian Król">
+  <meta property="og:description" content="Team Lead at Fresha.">
+  <style>
+    :root {
+      --bg: #fafaf9;
+      --fg: #1c1917;
+      --muted: #78716c;
+      --line: #e7e5e4;
+      --accent: #b45309;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #161514;
+        --fg: #f5f5f4;
+        --muted: #a8a29e;
+        --line: #2e2c2a;
+        --accent: #f59e0b;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: var(--bg);
+      color: var(--fg);
+      font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    main {
+      width: 100%;
+      max-width: 34rem;
+      padding: 3rem 1.25rem;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+    .role {
+      margin: 0.25rem 0 1.5rem;
+      color: var(--muted);
+    }
+    ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.5rem;
+      margin: 2rem 0 0;
+      padding: 1.5rem 0 0;
+      border-top: 1px solid var(--line);
+    }
+    a {
+      color: var(--fg);
+      text-decoration-color: var(--accent);
+      text-underline-offset: 3px;
+    }
+    a:hover { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Fabian Król</h1>
+    <p class="role">Team Lead at Fresha</p>
+
+    <ul>
+      <li><a href="https://github.com/fabiankrol">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/fabiankrol">LinkedIn</a></li>
+    </ul>
+  </main>
+</body>
+</html>
